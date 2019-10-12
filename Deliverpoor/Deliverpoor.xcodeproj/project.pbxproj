@@ -1,0 +1,468 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F71D9E5E235236F700F92667 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D9E5D235236F700F92667 /* AppDelegate.swift */; };
+		F71D9E60235236F700F92667 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D9E5F235236F700F92667 /* SceneDelegate.swift */; };
+		F71D9E67235236F900F92667 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F71D9E66235236F900F92667 /* Assets.xcassets */; };
+		F71D9E6A235236F900F92667 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F71D9E68235236F900F92667 /* LaunchScreen.storyboard */; };
+		F71D9E75235236F900F92667 /* DeliverpoorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D9E74235236F900F92667 /* DeliverpoorTests.swift */; };
+		F71D9E812352373C00F92667 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71D9E7F2352373C00F92667 /* ListViewController.swift */; };
+		F71D9E822352373C00F92667 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F71D9E802352373C00F92667 /* ListViewController.xib */; };
+		F71D9E852352484100F92667 /* restaurant-list.json in Resources */ = {isa = PBXBuildFile; fileRef = F71D9E842352484100F92667 /* restaurant-list.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F71D9E71235236F900F92667 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F71D9E52235236F700F92667 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F71D9E59235236F700F92667;
+			remoteInfo = Deliverpoor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F71D9E5A235236F700F92667 /* Deliverpoor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deliverpoor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F71D9E5D235236F700F92667 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F71D9E5F235236F700F92667 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F71D9E66235236F900F92667 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F71D9E69235236F900F92667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F71D9E6B235236F900F92667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F71D9E70235236F900F92667 /* DeliverpoorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeliverpoorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F71D9E74235236F900F92667 /* DeliverpoorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverpoorTests.swift; sourceTree = "<group>"; };
+		F71D9E76235236F900F92667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F71D9E7F2352373C00F92667 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		F71D9E802352373C00F92667 /* ListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
+		F71D9E8323523D3300F92667 /* DeliverpoorPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DeliverpoorPlayground.playground; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F71D9E842352484100F92667 /* restaurant-list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "restaurant-list.json"; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F71D9E57235236F700F92667 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F71D9E6D235236F900F92667 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F71D9E51235236F700F92667 = {
+			isa = PBXGroup;
+			children = (
+				F71D9E5C235236F700F92667 /* Deliverpoor */,
+				F71D9E73235236F900F92667 /* DeliverpoorTests */,
+				F71D9E5B235236F700F92667 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F71D9E5B235236F700F92667 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F71D9E5A235236F700F92667 /* Deliverpoor.app */,
+				F71D9E70235236F900F92667 /* DeliverpoorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F71D9E5C235236F700F92667 /* Deliverpoor */ = {
+			isa = PBXGroup;
+			children = (
+				F71D9E842352484100F92667 /* restaurant-list.json */,
+				F71D9E8323523D3300F92667 /* DeliverpoorPlayground.playground */,
+				F71D9E5D235236F700F92667 /* AppDelegate.swift */,
+				F71D9E5F235236F700F92667 /* SceneDelegate.swift */,
+				F71D9E7F2352373C00F92667 /* ListViewController.swift */,
+				F71D9E802352373C00F92667 /* ListViewController.xib */,
+				F71D9E66235236F900F92667 /* Assets.xcassets */,
+				F71D9E68235236F900F92667 /* LaunchScreen.storyboard */,
+				F71D9E6B235236F900F92667 /* Info.plist */,
+			);
+			path = Deliverpoor;
+			sourceTree = "<group>";
+		};
+		F71D9E73235236F900F92667 /* DeliverpoorTests */ = {
+			isa = PBXGroup;
+			children = (
+				F71D9E74235236F900F92667 /* DeliverpoorTests.swift */,
+				F71D9E76235236F900F92667 /* Info.plist */,
+			);
+			path = DeliverpoorTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F71D9E59235236F700F92667 /* Deliverpoor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F71D9E79235236F900F92667 /* Build configuration list for PBXNativeTarget "Deliverpoor" */;
+			buildPhases = (
+				F71D9E56235236F700F92667 /* Sources */,
+				F71D9E57235236F700F92667 /* Frameworks */,
+				F71D9E58235236F700F92667 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Deliverpoor;
+			productName = Deliverpoor;
+			productReference = F71D9E5A235236F700F92667 /* Deliverpoor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F71D9E6F235236F900F92667 /* DeliverpoorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F71D9E7C235236F900F92667 /* Build configuration list for PBXNativeTarget "DeliverpoorTests" */;
+			buildPhases = (
+				F71D9E6C235236F900F92667 /* Sources */,
+				F71D9E6D235236F900F92667 /* Frameworks */,
+				F71D9E6E235236F900F92667 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F71D9E72235236F900F92667 /* PBXTargetDependency */,
+			);
+			name = DeliverpoorTests;
+			productName = DeliverpoorTests;
+			productReference = F71D9E70235236F900F92667 /* DeliverpoorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F71D9E52235236F700F92667 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Alexandre Freire García";
+				TargetAttributes = {
+					F71D9E59235236F700F92667 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					F71D9E6F235236F900F92667 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = F71D9E59235236F700F92667;
+					};
+				};
+			};
+			buildConfigurationList = F71D9E55235236F700F92667 /* Build configuration list for PBXProject "Deliverpoor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F71D9E51235236F700F92667;
+			productRefGroup = F71D9E5B235236F700F92667 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F71D9E59235236F700F92667 /* Deliverpoor */,
+				F71D9E6F235236F900F92667 /* DeliverpoorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F71D9E58235236F700F92667 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F71D9E6A235236F900F92667 /* LaunchScreen.storyboard in Resources */,
+				F71D9E67235236F900F92667 /* Assets.xcassets in Resources */,
+				F71D9E852352484100F92667 /* restaurant-list.json in Resources */,
+				F71D9E822352373C00F92667 /* ListViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F71D9E6E235236F900F92667 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F71D9E56235236F700F92667 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F71D9E5E235236F700F92667 /* AppDelegate.swift in Sources */,
+				F71D9E60235236F700F92667 /* SceneDelegate.swift in Sources */,
+				F71D9E812352373C00F92667 /* ListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F71D9E6C235236F900F92667 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F71D9E75235236F900F92667 /* DeliverpoorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F71D9E72235236F900F92667 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F71D9E59235236F700F92667 /* Deliverpoor */;
+			targetProxy = F71D9E71235236F900F92667 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F71D9E68235236F900F92667 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F71D9E69235236F900F92667 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F71D9E77235236F900F92667 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F71D9E78235236F900F92667 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F71D9E7A235236F900F92667 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Deliverpoor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.Deliverpoor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F71D9E7B235236F900F92667 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Deliverpoor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.Deliverpoor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F71D9E7D235236F900F92667 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DeliverpoorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.DeliverpoorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Deliverpoor.app/Deliverpoor";
+			};
+			name = Debug;
+		};
+		F71D9E7E235236F900F92667 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DeliverpoorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexandrefreire.DeliverpoorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Deliverpoor.app/Deliverpoor";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F71D9E55235236F700F92667 /* Build configuration list for PBXProject "Deliverpoor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F71D9E77235236F900F92667 /* Debug */,
+				F71D9E78235236F900F92667 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F71D9E79235236F900F92667 /* Build configuration list for PBXNativeTarget "Deliverpoor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F71D9E7A235236F900F92667 /* Debug */,
+				F71D9E7B235236F900F92667 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F71D9E7C235236F900F92667 /* Build configuration list for PBXNativeTarget "DeliverpoorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F71D9E7D235236F900F92667 /* Debug */,
+				F71D9E7E235236F900F92667 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F71D9E52235236F700F92667 /* Project object */;
+}
