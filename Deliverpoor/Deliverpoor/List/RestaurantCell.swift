@@ -17,6 +17,7 @@ struct RestaurantCellViewModel {
 
 final class RestaurantCell: UITableViewCell {
 
+    
     // MARK: - Properties
     @IBOutlet private weak var photoView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
@@ -32,5 +33,15 @@ extension RestaurantCell {
         addressLabel.text = viewModel.distance
         distanceLabel.text = viewModel.distance
         timeLabel.text = viewModel.time
+    }
+}
+
+extension RestaurantCell {
+    static var nibName: String {
+        return String(describing: self)
+    }
+    
+    static var defaultIdentifier: String {
+        return String(describing: self)
     }
 }
