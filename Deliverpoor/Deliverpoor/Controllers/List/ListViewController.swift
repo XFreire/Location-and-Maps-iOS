@@ -38,6 +38,8 @@ final class ListViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         handleCurrentLocationAuthorizationStatus()
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
     }
 }
 
@@ -61,7 +63,7 @@ extension ListViewController {
         case .restricted, .denied:
             // TODO: Mostrar alerta
             // No sirve de nada volver a preguntar al usuario, ya que ha denegado el acceso.
-            // Es mejor mostrar una alerta diciendo que vayan a la app de Settings y lo habiliten 
+            // Es mejor mostrar una alerta diciendo que vayan a la app de Settings y lo habiliten
             break
         case .authorizedAlways, .authorizedWhenInUse:
             // Ya tenemos permiso
@@ -69,6 +71,17 @@ extension ListViewController {
         @unknown default:
             break
         }
+    }
+}
+
+// MARK: - CLLocationManagerDelegate
+extension ListViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print(locations)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
     }
 }
 
