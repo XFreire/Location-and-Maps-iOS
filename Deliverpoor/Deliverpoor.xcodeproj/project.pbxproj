@@ -21,7 +21,7 @@
 		F787D1EE235371BC007001F8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1EC235371BC007001F8 /* MapViewController.swift */; };
 		F787D1EF235371BC007001F8 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F787D1ED235371BC007001F8 /* MapViewController.xib */; };
 		F787D1F323537568007001F8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1F223537568007001F8 /* Restaurant.swift */; };
-		F787D1F5235375C7007001F8 /* RestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1F4235375C7007001F8 /* RestaurantRepository.swift */; };
+		F787D1F5235375C7007001F8 /* LocalRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1F4235375C7007001F8 /* LocalRestaurantRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		F787D1EC235371BC007001F8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F787D1ED235371BC007001F8 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		F787D1F223537568007001F8 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
-		F787D1F4235375C7007001F8 /* RestaurantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRepository.swift; sourceTree = "<group>"; };
+		F787D1F4235375C7007001F8 /* LocalRestaurantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRestaurantRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				F787D1F223537568007001F8 /* Restaurant.swift */,
-				F787D1F4235375C7007001F8 /* RestaurantRepository.swift */,
+				F787D1F4235375C7007001F8 /* LocalRestaurantRepository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,7 +267,7 @@
 				F787D1F323537568007001F8 /* Restaurant.swift in Sources */,
 				F71D9E60235236F700F92667 /* SceneDelegate.swift in Sources */,
 				F787D1EE235371BC007001F8 /* MapViewController.swift in Sources */,
-				F787D1F5235375C7007001F8 /* RestaurantRepository.swift in Sources */,
+				F787D1F5235375C7007001F8 /* LocalRestaurantRepository.swift in Sources */,
 				F71D9E812352373C00F92667 /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
