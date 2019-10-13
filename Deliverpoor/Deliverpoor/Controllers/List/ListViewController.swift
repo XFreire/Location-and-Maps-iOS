@@ -38,6 +38,7 @@ final class ListViewController: UIViewController {
         setupUI()
         handleCurrentLocationAuthorizationStatus()
         locationManager.delegate = self
+        locationManager.allowsBackgroundLocationUpdates = true
         locationManager.startUpdatingLocation()
     }
 }
@@ -57,8 +58,7 @@ extension ListViewController {
         let status = CLLocationManager.authorizationStatus()
         switch status {
         case .notDetermined:
-            locationManager.requestWhenInUseAuthorization()
-            // locationManager.requestAlwaysAuthorization()
+            locationManager.requestAlwaysAuthorization()
         case .restricted, .denied:
             // TODO: Mostrar alerta
             // No sirve de nada volver a preguntar al usuario, ya que ha denegado el acceso.
