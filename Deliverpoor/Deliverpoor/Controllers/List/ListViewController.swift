@@ -10,11 +10,15 @@ import UIKit
 
 final class ListViewController: UIViewController {
     
-    // MARK: - Properties
+    // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Properties
+    private let repository: RestaurantRepositoryProtocol
+    
     // MARK: - Initialization
-    init() {
+    init(repository: RestaurantRepositoryProtocol = LocalRestaurantRepository()) {
+        self.repository = repository
         super.init(nibName: nil, bundle: nil)
         title = "List"
     }
@@ -49,13 +53,21 @@ extension ListViewController: UITableViewDelegate {
 // MARK: - UITableView DataSource
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return repository.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantCell.defaultIdentifier) as! RestaurantCell
         
-        // TODO: Implement
+        guard let restaurant = repository.restaurant(at: indexPath.row) else { return cell }
+        let cellViewModel = RestaurantCellViewModel(
+            name: restaurant.name,
+            address: "Lat: \(restaurant.latitude); Long: \(restaurant.longitude)",
+            distance: "Distance: unknown",
+            time: "¿?"
+        )
+        
+        cell.update(with: cellViewModel)
         
         return cell
     }

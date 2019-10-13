@@ -35,7 +35,7 @@ final class RestaurantCell: UITableViewCell {
 extension RestaurantCell {
     func update(with viewModel: RestaurantCellViewModel) {
         nameLabel.text = viewModel.name
-        addressLabel.text = viewModel.distance
+        addressLabel.text = viewModel.address
         distanceLabel.text = viewModel.distance
         timeLabel.text = viewModel.time
     }
