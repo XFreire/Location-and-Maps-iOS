@@ -16,10 +16,15 @@ final class ListViewController: UIViewController {
     
     // MARK: - Properties
     private let repository: RestaurantRepositoryProtocol
+    private let locationManager: CLLocationManager
     
     // MARK: - Initialization
-    init(repository: RestaurantRepositoryProtocol = LocalRestaurantRepository()) {
+    init(
+        repository: RestaurantRepositoryProtocol = LocalRestaurantRepository(),
+        locationManager: CLLocationManager = CLLocationManager()
+    ) {
         self.repository = repository
+        self.locationManager = locationManager
         super.init(nibName: nil, bundle: nil)
         title = "List"
     }
@@ -31,6 +36,7 @@ final class ListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        handleCurrentLocationAuthorizationStatus()
     }
 }
 
@@ -43,7 +49,29 @@ extension ListViewController {
     }
 }
 
-// MARK: - UITableViewDelegate
+// MARK: - Location
+extension ListViewController {
+    private func handleCurrentLocationAuthorizationStatus() {
+        let status = CLLocationManager.authorizationStatus()
+        switch status {
+        case .notDetermined:
+            locationManager.requestWhenInUseAuthorization()
+            // locationManager.requestAlwaysAuthorization()
+        case .restricted, .denied:
+            // TODO: Mostrar alerta
+            // No sirve de nada volver a preguntar al usuario, ya que ha denegado el acceso.
+            // Es mejor mostrar una alerta diciendo que vayan a la app de Settings y lo habiliten 
+            break
+        case .authorizedAlways, .authorizedWhenInUse:
+            // Ya tenemos permiso
+            break
+        @unknown default:
+            break
+        }
+    }
+}
+
+// MARK: - UITableView Delegate
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
