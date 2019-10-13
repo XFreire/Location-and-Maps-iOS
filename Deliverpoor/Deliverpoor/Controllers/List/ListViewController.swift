@@ -16,6 +16,7 @@ final class ListViewController: UIViewController {
     // MARK: - Initialization
     init() {
         super.init(nibName: nil, bundle: nil)
+        title = "List"
     }
     
     required init?(coder: NSCoder) {
