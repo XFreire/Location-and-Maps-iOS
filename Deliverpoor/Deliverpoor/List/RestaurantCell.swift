@@ -24,6 +24,11 @@ final class RestaurantCell: UITableViewCell {
     @IBOutlet private weak var addressLabel: UILabel!
     @IBOutlet private weak var distanceLabel: UILabel!
     @IBOutlet private weak var timeLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        setupUI()
+    }
 }
 
 // MARK: - Public interface
@@ -33,6 +38,13 @@ extension RestaurantCell {
         addressLabel.text = viewModel.distance
         distanceLabel.text = viewModel.distance
         timeLabel.text = viewModel.time
+    }
+}
+
+extension RestaurantCell {
+    private func setupUI() {
+        timeLabel.layer.masksToBounds = true
+        timeLabel.layer.cornerRadius = timeLabel.frame.height / 2
     }
 }
 
