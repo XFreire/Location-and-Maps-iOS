@@ -18,6 +18,8 @@ final class ListViewController: UIViewController {
     private let repository: RestaurantRepositoryProtocol
     private let locationManager: CLLocationManager
     
+    private var currentLocation: CLLocation?
+    
     // MARK: - Initialization
     init(
         repository: RestaurantRepositoryProtocol = LocalRestaurantRepository(),
@@ -25,6 +27,7 @@ final class ListViewController: UIViewController {
     ) {
         self.repository = repository
         self.locationManager = locationManager
+        self.currentLocation = nil
         super.init(nibName: nil, bundle: nil)
         title = "List"
     }
@@ -39,8 +42,7 @@ final class ListViewController: UIViewController {
         setupUI()
         handleCurrentLocationAuthorizationStatus()
         locationManager.delegate = self
-        locationManager.allowsBackgroundLocationUpdates = true
-        locationManager.startUpdatingLocation()
+        locationManager.requestLocation()
     }
 }
 
@@ -72,12 +74,22 @@ extension ListViewController {
             break
         }
     }
+    
+    private func calculateDistance(to restaurant: Restaurant) -> String {
+        guard let currentLocation = currentLocation else { return "Distance: unknown" }
+        let restaurantLocation = CLLocation(latitude: restaurant.latitude, longitude: restaurant.longitude)
+        let distanceValueInMeters = restaurantLocation.distance(from: currentLocation)
+        return Measurement.init(value: distanceValueInMeters, unit: UnitLength.meters)
+            .converted(to: UnitLength.kilometers)
+            .description
+    }
 }
 
 // MARK: - CLLocationManagerDelegate
 extension ListViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print(locations)
+        currentLocation = locations.first
+        tableView.reloadData()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -105,7 +117,7 @@ extension ListViewController: UITableViewDataSource {
         let cellViewModel = RestaurantCellViewModel(
             name: restaurant.name,
             address: "Lat: \(restaurant.latitude); Long: \(restaurant.longitude)",
-            distance: "Distance: unknown",
+            distance: calculateDistance(to: restaurant),
             time: "¿?"
         )
         
