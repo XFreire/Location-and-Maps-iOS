@@ -146,7 +146,7 @@ extension ListViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
+        print("[] \(error.localizedDescription)")
     }
 }
 
@@ -154,6 +154,12 @@ extension ListViewController: CLLocationManagerDelegate {
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let restaurant = repository.restaurant(at: indexPath.row) else { return }
+        let detailViewController = DetailViewController(restaurant: restaurant, locationManager: locationManager)
+        navigationController?.pushViewController(detailViewController, animated: true) 
     }
 }
 

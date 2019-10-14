@@ -24,6 +24,8 @@
 		F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D1F82355A630007001F8 /* a-la-bombilla.gpx */; };
 		F787D204235A1A7C007001F8 /* torre-hercules.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D203235A1A7B007001F8 /* torre-hercules.gpx */; };
 		F7F2EB76235A5A8A00B836F3 /* torre-hercules2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F7F2EB75235A5A8900B836F3 /* torre-hercules2.gpx */; };
+		F787D1FD2355A80F007001F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1FB2355A80F007001F8 /* DetailViewController.swift */; };
+		F787D1FE2355A80F007001F8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F787D1FC2355A80F007001F8 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		F787D1F82355A630007001F8 /* a-la-bombilla.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "a-la-bombilla.gpx"; sourceTree = "<group>"; };
 		F787D203235A1A7B007001F8 /* torre-hercules.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-hercules.gpx"; sourceTree = "<group>"; };
 		F7F2EB75235A5A8900B836F3 /* torre-hercules2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-hercules2.gpx"; sourceTree = "<group>"; };
+		F787D1FB2355A80F007001F8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F787D1FC2355A80F007001F8 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +145,7 @@
 		F787D1F023537545007001F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F787D1FA2355A802007001F8 /* Detail */,
 				F787D1E0235361D5007001F8 /* List */,
 			);
 			path = Controllers;
@@ -153,6 +158,15 @@
 				F787D1F4235375C7007001F8 /* LocalRestaurantRepository.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F787D1FA2355A802007001F8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F787D1FB2355A80F007001F8 /* DetailViewController.swift */,
+				F787D1FC2355A80F007001F8 /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +258,9 @@
 				F71D9E852352484100F92667 /* restaurant-list.json in Resources */,
 				F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */,
 				F787D204235A1A7C007001F8 /* torre-hercules.gpx in Resources */,
+				F787D1EF235371BC007001F8 /* MapViewController.xib in Resources */,
+				F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */,
+				F787D1FE2355A80F007001F8 /* DetailViewController.xib in Resources */,
 				F787D1E4235361F1007001F8 /* RestaurantCell.xib in Resources */,
 				F71D9E822352373C00F92667 /* ListViewController.xib in Resources */,
 			);
@@ -269,6 +286,7 @@
 				F71D9E60235236F700F92667 /* SceneDelegate.swift in Sources */,
 				F787D1F5235375C7007001F8 /* LocalRestaurantRepository.swift in Sources */,
 				F71D9E812352373C00F92667 /* ListViewController.swift in Sources */,
+				F787D1FD2355A80F007001F8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
