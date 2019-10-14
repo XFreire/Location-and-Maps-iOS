@@ -78,9 +78,18 @@ extension ListViewController {
         guard let currentLocation = currentLocation else { return "Distance: unknown" }
         let restaurantLocation = CLLocation(latitude: restaurant.latitude, longitude: restaurant.longitude)
         let distanceValueInMeters = restaurantLocation.distance(from: currentLocation)
-        return Measurement.init(value: distanceValueInMeters, unit: UnitLength.meters)
-            .converted(to: UnitLength.kilometers)
-            .description
+        let measurement = Measurement(value: distanceValueInMeters, unit: UnitLength.meters)
+            .converted(to: .kilometers)
+        
+        // Formateamos el valor para tener sólo dos decimales
+        let numberFormatter = NumberFormatter()
+        numberFormatter.maximumFractionDigits = 2
+        
+        let measurementFormatter = MeasurementFormatter()
+        measurementFormatter.numberFormatter = numberFormatter
+        measurementFormatter.unitOptions = .providedUnit // Para que use la unidad del measurement
+        
+        return measurementFormatter.string(from: measurement)
     }
 }
 
