@@ -75,7 +75,7 @@ extension ListViewController {
         }
     }
     
-    private func calculateDistance(to restaurant: Restaurant) -> String {
+    private func distance(to restaurant: Restaurant) -> String {
         guard let currentLocation = currentLocation else { return "Distance: unknown" }
         let restaurantLocation = CLLocation(latitude: restaurant.latitude, longitude: restaurant.longitude)
         let distanceValueInMeters = restaurantLocation.distance(from: currentLocation)
@@ -91,6 +91,31 @@ extension ListViewController {
         measurementFormatter.unitOptions = .providedUnit // Para que use la unidad del measurement
         
         return measurementFormatter.string(from: measurement)
+    }
+    
+    private func address(of restaurant: Restaurant, completion: @escaping (Result<String, Error>) -> Void) {
+        let restaurantLocation = CLLocation(latitude: restaurant.latitude, longitude: restaurant.latitude)
+        
+        let geocoder = CLGeocoder()
+        geocoder.reverseGeocodeLocation(restaurantLocation) { placemarks, error in
+            if let error = error {
+                print(error)
+                completion(.failure(error))
+                return
+            }
+            guard let placemark = placemarks?.first else {
+                completion(.failure(CLError.geocodeFoundNoResult as! Error))
+                return
+            }
+            
+            let street = placemark.subThoroughfare ?? ""
+            let city = placemark.locality ?? ""
+            let state = placemark.administrativeArea ?? ""
+            
+            let address = "\(street), \(city), \(state)"
+            completion(.success(address))
+            return
+        }
     }
 }
 
@@ -123,14 +148,25 @@ extension ListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: RestaurantCell.defaultIdentifier) as! RestaurantCell
         
         guard let restaurant = repository.restaurant(at: indexPath.row) else { return cell }
-        let cellViewModel = RestaurantCellViewModel(
-            name: restaurant.name,
-            address: "Lat: \(restaurant.latitude); Long: \(restaurant.longitude)",
-            distance: calculateDistance(to: restaurant),
-            time: "¿?"
-        )
+        let distanceString = distance(to: restaurant)
         
-        cell.update(with: cellViewModel)
+        address(of: restaurant) { result in
+            switch result {
+            case .success(let address):
+                let cellViewModel = RestaurantCellViewModel(
+                    name: restaurant.name,
+                    address: address,
+                    distance: distanceString,
+                    time: "¿?"
+                )
+                
+                cell.update(with: cellViewModel)
+            case .failure:
+                break
+            }
+        }
+        
+        
         
         return cell
     }
