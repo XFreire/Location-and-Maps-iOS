@@ -7,9 +7,21 @@
 //
 
 import Foundation
+import MapKit
 
-struct Restaurant: Decodable {
+final class Restaurant: NSObject, Decodable {
     let name: String
     let latitude: Double
     let longitude: Double
+}
+
+// MARK: - MKAnnotation
+extension Restaurant: MKAnnotation {
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+    
+    var title: String? {
+        return name
+    }
 }
