@@ -83,16 +83,28 @@ extension MapViewController: MKMapViewDelegate {
         guard type(of: annotation) != MKUserLocation.self else {
             return nil
         }
-    
-        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "Restaurants") as? MKMarkerAnnotationView ?? MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "Restaurants")
         
-        annotationView.glyphText = "🍽"
-        
-        annotationView.canShowCallout = true
-        let imageView = UIImageView(image: UIImage(named: "placeholder-food.jpg"))
-        imageView.contentMode = .scaleAspectFill
-        annotationView.detailCalloutAccessoryView = imageView
-        
-        return annotationView
+        if let cluster = annotation as? MKClusterAnnotation {
+            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "RestaurantsCluster") as? MKMarkerAnnotationView ?? MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "RestaurantsCluster")
+            
+            annotationView.markerTintColor = .orange
+            annotationView.annotation = cluster
+            
+            return annotationView
+        } else {
+            
+            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "Restaurants") as? MKMarkerAnnotationView ?? MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "Restaurants")
+            
+            annotationView.glyphText = "🍽"
+            
+            annotationView.canShowCallout = true
+            annotationView.clusteringIdentifier = "RestaurantCluster"
+            
+            let imageView = UIImageView(image: UIImage(named: "placeholder-food.jpg"))
+            imageView.contentMode = .scaleAspectFill
+            annotationView.detailCalloutAccessoryView = imageView
+            
+            return annotationView
+        }
     }
 }
