@@ -88,6 +88,11 @@ extension MapViewController: MKMapViewDelegate {
         
         annotationView.glyphText = "🍽"
         
+        annotationView.canShowCallout = true
+        let imageView = UIImageView(image: UIImage(named: "placeholder-food.jpg"))
+        imageView.contentMode = .scaleAspectFit
+        annotationView.detailCalloutAccessoryView = imageView
+        
         return annotationView
     }
 }
