@@ -17,17 +17,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fhw-yI-fPS">
-                    <rect key="frame" x="190" y="437.5" width="34" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="MUK-JS-d5M">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </mapView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Fhw-yI-fPS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="OhF-R4-2uH"/>
-                <constraint firstItem="Fhw-yI-fPS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pQY-qF-v2t"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MUK-JS-d5M" secondAttribute="trailing" id="Czi-rn-io0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MUK-JS-d5M" secondAttribute="bottom" id="JvA-8H-TFd"/>
+                <constraint firstItem="MUK-JS-d5M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iDA-9l-ObL"/>
+                <constraint firstItem="MUK-JS-d5M" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uDF-3m-JLS"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="104"/>
