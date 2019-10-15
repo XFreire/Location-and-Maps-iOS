@@ -78,4 +78,16 @@ extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         print("[] Region has changed")
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard type(of: annotation) != MKUserLocation.self else {
+            return nil
+        }
+    
+        let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "Restaurants") as? MKMarkerAnnotationView ?? MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "Restaurants")
+        
+        annotationView.glyphText = "🍽"
+        
+        return annotationView
+    }
 }
