@@ -23,6 +23,9 @@
 		F787D1F323537568007001F8 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1F223537568007001F8 /* Restaurant.swift */; };
 		F787D1F5235375C7007001F8 /* LocalRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1F4235375C7007001F8 /* LocalRestaurantRepository.swift */; };
 		F787D1F723539036007001F8 /* torre-a-riazor.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D1F623539036007001F8 /* torre-a-riazor.gpx */; };
+		F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D1F82355A630007001F8 /* a-la-bombilla.gpx */; };
+		F787D1FD2355A80F007001F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1FB2355A80F007001F8 /* DetailViewController.swift */; };
+		F787D1FE2355A80F007001F8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F787D1FC2355A80F007001F8 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		F787D1F223537568007001F8 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		F787D1F4235375C7007001F8 /* LocalRestaurantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRestaurantRepository.swift; sourceTree = "<group>"; };
 		F787D1F623539036007001F8 /* torre-a-riazor.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-a-riazor.gpx"; sourceTree = "<group>"; };
+		F787D1F82355A630007001F8 /* a-la-bombilla.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "a-la-bombilla.gpx"; sourceTree = "<group>"; };
+		F787D1FB2355A80F007001F8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F787D1FC2355A80F007001F8 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				F787D1F623539036007001F8 /* torre-a-riazor.gpx */,
+				F787D1F82355A630007001F8 /* a-la-bombilla.gpx */,
 				F787D1E52353629C007001F8 /* placeholder-food.jpg */,
 				F71D9E842352484100F92667 /* restaurant-list.json */,
 				F71D9E8323523D3300F92667 /* DeliverpoorPlayground.playground */,
@@ -145,6 +152,7 @@
 		F787D1F023537545007001F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F787D1FA2355A802007001F8 /* Detail */,
 				F787D1EB235371A6007001F8 /* Map */,
 				F787D1E0235361D5007001F8 /* List */,
 			);
@@ -158,6 +166,15 @@
 				F787D1F4235375C7007001F8 /* LocalRestaurantRepository.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F787D1FA2355A802007001F8 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F787D1FB2355A80F007001F8 /* DetailViewController.swift */,
+				F787D1FC2355A80F007001F8 /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,6 +264,8 @@
 				F71D9E67235236F900F92667 /* Assets.xcassets in Resources */,
 				F71D9E852352484100F92667 /* restaurant-list.json in Resources */,
 				F787D1EF235371BC007001F8 /* MapViewController.xib in Resources */,
+				F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */,
+				F787D1FE2355A80F007001F8 /* DetailViewController.xib in Resources */,
 				F787D1E4235361F1007001F8 /* RestaurantCell.xib in Resources */,
 				F71D9E822352373C00F92667 /* ListViewController.xib in Resources */,
 			);
@@ -273,6 +292,7 @@
 				F787D1EE235371BC007001F8 /* MapViewController.swift in Sources */,
 				F787D1F5235375C7007001F8 /* LocalRestaurantRepository.swift in Sources */,
 				F71D9E812352373C00F92667 /* ListViewController.swift in Sources */,
+				F787D1FD2355A80F007001F8 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
