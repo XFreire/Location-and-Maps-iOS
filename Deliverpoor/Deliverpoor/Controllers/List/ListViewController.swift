@@ -108,11 +108,12 @@ extension ListViewController {
                 return
             }
             
-            let street = placemark.subThoroughfare ?? ""
+            let number = placemark.subThoroughfare ?? ""
+            let street = placemark.thoroughfare ?? ""
             let city = placemark.locality ?? ""
             let state = placemark.administrativeArea ?? ""
             
-            let address = "\(street), \(city), \(state)"
+            let address = "\(street) \(number), \(city), \(state)"
             completion(.success(address))
             return
         }
