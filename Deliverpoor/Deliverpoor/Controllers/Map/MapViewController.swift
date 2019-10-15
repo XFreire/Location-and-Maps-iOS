@@ -90,7 +90,7 @@ extension MapViewController: MKMapViewDelegate {
         
         annotationView.canShowCallout = true
         let imageView = UIImageView(image: UIImage(named: "placeholder-food.jpg"))
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         annotationView.detailCalloutAccessoryView = imageView
         
         return annotationView
