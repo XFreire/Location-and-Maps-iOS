@@ -18,7 +18,7 @@ final class ListViewController: UIViewController {
     private let repository: RestaurantRepositoryProtocol
     private let locationManager: CLLocationManager
     
-    private var currentLocation: CLLocation?
+    private var currentLocation: CLLocation!
     
     // MARK: - Initialization
     init(
@@ -74,10 +74,10 @@ extension ListViewController {
         }
     }
     
-    private func distance(to restaurant: Restaurant) -> String {
+    private func distance(to location: CLLocation) -> String {
         guard let currentLocation = currentLocation else { return "Distance: unknown" }
-        let restaurantLocation = CLLocation(latitude: restaurant.latitude, longitude: restaurant.longitude)
-        let distanceValueInMeters = restaurantLocation.distance(from: currentLocation)
+        
+        let distanceValueInMeters = location.distance(from: currentLocation)
         let measurement = Measurement(value: distanceValueInMeters, unit: UnitLength.meters)
             .converted(to: .kilometers)
         
@@ -117,6 +117,25 @@ extension ListViewController {
             return
         }
     }
+    
+    private func location(of address: String, completion: @escaping (Result<CLLocation, Error>) -> Void) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(address) { placemarks, error in
+            if let error = error {
+                print(error)
+                completion(.failure(error))
+                return
+            }
+            guard let placemark = placemarks?.first,
+                let location = placemark.location else {
+                completion(.failure(CLError.geocodeFoundNoResult as! Error))
+                return
+            }
+            
+            completion(.success(location))
+            return
+        }
+    }
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -131,7 +150,7 @@ extension ListViewController: CLLocationManagerDelegate {
     }
 }
 
-// MARK: - UITableView DataSource
+// MARK: - UITableView Delegate
 extension ListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
@@ -149,18 +168,26 @@ extension ListViewController: UITableViewDataSource {
         
         guard let restaurant = repository.restaurant(at: indexPath.row) else { return cell }
 
-        let distanceString = distance(to: restaurant)
-        
-        address(of: restaurant) { result in
+        // Obtenemos la dirección del restaurante
+        address(of: restaurant) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let address):
-                let cellViewModel = RestaurantCellViewModel(
-                    name: restaurant.name,
-                    address: address,
-                    distance: distanceString
-                )
-                
-                cell.update(with: cellViewModel)
+                // Calculamos la distancia. Es un poco redundante pero es para practicar
+                self.location(of: address) { result in
+                    switch result {
+                    case .success(let location):
+                        let cellViewModel = RestaurantCellViewModel(
+                            name: restaurant.name,
+                            address: address,
+                            distance: self.distance(to: location)
+                        )
+                        
+                        cell.update(with: cellViewModel)
+                    case .failure:
+                        break
+                    }
+                }
             case .failure:
                 break
             }
