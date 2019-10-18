@@ -23,6 +23,7 @@
 		F787D1F723539036007001F8 /* torre-a-riazor.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D1F623539036007001F8 /* torre-a-riazor.gpx */; };
 		F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D1F82355A630007001F8 /* a-la-bombilla.gpx */; };
 		F787D204235A1A7C007001F8 /* torre-hercules.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D203235A1A7B007001F8 /* torre-hercules.gpx */; };
+		F7F2EB76235A5A8A00B836F3 /* torre-hercules2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F7F2EB75235A5A8900B836F3 /* torre-hercules2.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F787D1F623539036007001F8 /* torre-a-riazor.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-a-riazor.gpx"; sourceTree = "<group>"; };
 		F787D1F82355A630007001F8 /* a-la-bombilla.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "a-la-bombilla.gpx"; sourceTree = "<group>"; };
 		F787D203235A1A7B007001F8 /* torre-hercules.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-hercules.gpx"; sourceTree = "<group>"; };
+		F7F2EB75235A5A8900B836F3 /* torre-hercules2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-hercules2.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		F71D9E5C235236F700F92667 /* Deliverpoor */ = {
 			isa = PBXGroup;
 			children = (
+				F7F2EB75235A5A8900B836F3 /* torre-hercules2.gpx */,
 				F787D203235A1A7B007001F8 /* torre-hercules.gpx */,
 				F787D1F623539036007001F8 /* torre-a-riazor.gpx */,
 				F787D1F82355A630007001F8 /* a-la-bombilla.gpx */,
@@ -233,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7F2EB76235A5A8A00B836F3 /* torre-hercules2.gpx in Resources */,
 				F787D1F723539036007001F8 /* torre-a-riazor.gpx in Resources */,
 				F787D1E62353629C007001F8 /* placeholder-food.jpg in Resources */,
 				F71D9E6A235236F900F92667 /* LaunchScreen.storyboard in Resources */,
