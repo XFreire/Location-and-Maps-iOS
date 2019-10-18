@@ -26,6 +26,8 @@
 		F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D1F82355A630007001F8 /* a-la-bombilla.gpx */; };
 		F787D1FD2355A80F007001F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1FB2355A80F007001F8 /* DetailViewController.swift */; };
 		F787D1FE2355A80F007001F8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F787D1FC2355A80F007001F8 /* DetailViewController.xib */; };
+		F787D2002359ACC0007001F8 /* RestaurantAnnontationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1FF2359ACC0007001F8 /* RestaurantAnnontationView.swift */; };
+		F787D2022359ADA3007001F8 /* RestaurantClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D2012359ADA3007001F8 /* RestaurantClusterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		F787D1F82355A630007001F8 /* a-la-bombilla.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "a-la-bombilla.gpx"; sourceTree = "<group>"; };
 		F787D1FB2355A80F007001F8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F787D1FC2355A80F007001F8 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		F787D1FF2359ACC0007001F8 /* RestaurantAnnontationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnontationView.swift; sourceTree = "<group>"; };
+		F787D2012359ADA3007001F8 /* RestaurantClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantClusterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 			children = (
 				F787D1EC235371BC007001F8 /* MapViewController.swift */,
 				F787D1ED235371BC007001F8 /* MapViewController.xib */,
+				F787D1FF2359ACC0007001F8 /* RestaurantAnnontationView.swift */,
+				F787D2012359ADA3007001F8 /* RestaurantClusterView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -285,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F787D2022359ADA3007001F8 /* RestaurantClusterView.swift in Sources */,
 				F787D1E3235361F1007001F8 /* RestaurantCell.swift in Sources */,
+				F787D2002359ACC0007001F8 /* RestaurantAnnontationView.swift in Sources */,
 				F71D9E5E235236F700F92667 /* AppDelegate.swift in Sources */,
 				F787D1F323537568007001F8 /* Restaurant.swift in Sources */,
 				F71D9E60235236F700F92667 /* SceneDelegate.swift in Sources */,
