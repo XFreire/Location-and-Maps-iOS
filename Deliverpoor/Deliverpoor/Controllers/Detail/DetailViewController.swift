@@ -8,16 +8,24 @@
 
 import UIKit
 import CoreLocation
+import MapKit
 
 final class DetailViewController: UIViewController {
 
+    // MARK: - Properties
     private let restaurant: Restaurant
     private let locationManager: CLLocationManager
+    private var currentLocation: CLLocation?
+    
+    /// Determines if a directions request should take place
+    private var shouldRequestDirections: Bool
     
     // MARK: - Initialization
     init(restaurant: Restaurant, locationManager: CLLocationManager) {
         self.restaurant = restaurant
         self.locationManager = locationManager
+        currentLocation = nil
+        shouldRequestDirections = true
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -40,6 +48,44 @@ extension DetailViewController {
         let region = CLCircularRegion(center: restaurantCoords, radius: 20, identifier: restaurant.name)
         locationManager.startMonitoring(for: region)
     }
+    
+    private func requestDirectionsIfNeeded() {
+        guard shouldRequestDirections else { return }
+        guard let currentLocation = currentLocation else { return }
+        
+        // Creamos el punto de inicio y punto de destino
+        let source = MKMapItem(placemark: MKPlacemark(coordinate: currentLocation.coordinate))
+        let destination = MKMapItem(placemark: MKPlacemark(coordinate: restaurant.coordinate))
+        
+        // Creamos la request
+        let request = MKDirections.Request()
+        request.source = source
+        request.destination = destination
+        request.transportType = .walking
+        
+        // Calculamos las directions
+        let directions = MKDirections(request: request)
+        directions.calculate { [weak self] directions, error in
+            if let error = error {
+                // TODO: - Display an error alert
+                print("[] Error: \(error)")
+                return
+            }
+            
+            guard let route = directions?.routes.first else {
+                print("[] We could not find any route between the two provided locations")
+                return
+            }
+            
+            print("[] Steps: \(route.distance)")
+            print("[] Time: \(route.expectedTravelTime / 60)")
+            print("[] Steps: \(route.steps)")
+            print("[] Polyine: \(route.polyline)")
+            
+            // Actualizamos la variable para no solicitar la ruta otra vez
+            self?.shouldRequestDirections = false
+        }
+    }
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -53,6 +99,8 @@ extension DetailViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("[] User is walking...")
         print("[] \(locations)")
+        currentLocation = locations.last
+        requestDirectionsIfNeeded()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
