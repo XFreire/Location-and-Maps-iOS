@@ -12,6 +12,9 @@ import MapKit
 
 final class DetailViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var mapView: MKMapView!
+    
     // MARK: - Properties
     private let restaurant: Restaurant
     private let locationManager: CLLocationManager
@@ -38,6 +41,24 @@ final class DetailViewController: UIViewController {
         locationManager.delegate = self
         monitorRegion(around: restaurant)
         locationManager.startUpdatingLocation()
+        setupUI()
+    }
+}
+
+// MARK: - Setup UI
+extension DetailViewController {
+    private func setupUI() {
+        addAnnotation(in: restaurant)
+        centerMapBetweenCurrentLocationAndRestaurant()
+    }
+    
+    private func addAnnotation(in restaurant: Restaurant) {
+        mapView.addAnnotation(restaurant)
+    }
+    
+    private func centerMapBetweenCurrentLocationAndRestaurant() {
+        let annotations = mapView.annotations
+        mapView.showAnnotations(annotations, animated: true)
     }
 }
 

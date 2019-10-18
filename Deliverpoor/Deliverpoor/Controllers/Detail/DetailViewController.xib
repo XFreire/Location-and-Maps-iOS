@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="Deliverpoor" customModuleProvider="target">
             <connections>
+                <outlet property="mapView" destination="M1Z-rA-VdF" id="d8P-jq-gZW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,17 +18,16 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jOE-Zu-trN">
-                    <rect key="frame" x="185" y="437.5" width="44" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M1Z-rA-VdF">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                </mapView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="jOE-Zu-trN" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Tef-kS-W5U"/>
-                <constraint firstItem="jOE-Zu-trN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tG5-VF-IgT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M1Z-rA-VdF" secondAttribute="trailing" id="Paj-5F-oTb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="M1Z-rA-VdF" secondAttribute="bottom" id="YQq-x4-ZKH"/>
+                <constraint firstItem="M1Z-rA-VdF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="YrG-fK-fkp"/>
+                <constraint firstItem="M1Z-rA-VdF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="tXl-8k-2gq"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140.57971014492756" y="103.79464285714285"/>

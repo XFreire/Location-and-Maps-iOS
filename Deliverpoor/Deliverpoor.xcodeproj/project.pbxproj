@@ -28,6 +28,7 @@
 		F787D1FE2355A80F007001F8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F787D1FC2355A80F007001F8 /* DetailViewController.xib */; };
 		F787D2002359ACC0007001F8 /* RestaurantAnnontationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1FF2359ACC0007001F8 /* RestaurantAnnontationView.swift */; };
 		F787D2022359ADA3007001F8 /* RestaurantClusterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D2012359ADA3007001F8 /* RestaurantClusterView.swift */; };
+		F787D204235A1A7C007001F8 /* torre-hercules.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D203235A1A7B007001F8 /* torre-hercules.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		F787D1FC2355A80F007001F8 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		F787D1FF2359ACC0007001F8 /* RestaurantAnnontationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantAnnontationView.swift; sourceTree = "<group>"; };
 		F787D2012359ADA3007001F8 /* RestaurantClusterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantClusterView.swift; sourceTree = "<group>"; };
+		F787D203235A1A7B007001F8 /* torre-hercules.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-hercules.gpx"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		F71D9E5C235236F700F92667 /* Deliverpoor */ = {
 			isa = PBXGroup;
 			children = (
+				F787D203235A1A7B007001F8 /* torre-hercules.gpx */,
 				F787D1F623539036007001F8 /* torre-a-riazor.gpx */,
 				F787D1F82355A630007001F8 /* a-la-bombilla.gpx */,
 				F787D1E52353629C007001F8 /* placeholder-food.jpg */,
@@ -271,6 +274,7 @@
 				F71D9E852352484100F92667 /* restaurant-list.json in Resources */,
 				F787D1EF235371BC007001F8 /* MapViewController.xib in Resources */,
 				F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */,
+				F787D204235A1A7C007001F8 /* torre-hercules.gpx in Resources */,
 				F787D1FE2355A80F007001F8 /* DetailViewController.xib in Resources */,
 				F787D1E4235361F1007001F8 /* RestaurantCell.xib in Resources */,
 				F71D9E822352373C00F92667 /* ListViewController.xib in Resources */,
