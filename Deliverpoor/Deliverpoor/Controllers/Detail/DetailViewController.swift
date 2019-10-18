@@ -38,6 +38,7 @@ final class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         locationManager.delegate = self
         monitorRegion(around: restaurant)
         addAnnotation(in: restaurant)
@@ -50,6 +51,11 @@ final class DetailViewController: UIViewController {
 extension DetailViewController {
     private func addAnnotation(in restaurant: Restaurant) {
         mapView.addAnnotation(restaurant)
+    }
+    
+    private func centerMapBetweenCurrentLocationAndRestaurant() {
+        let annotations = mapView.annotations
+        mapView.showAnnotations(annotations, animated: true)
     }
 }
 
@@ -94,6 +100,10 @@ extension DetailViewController {
             print("[] Steps: \(route.steps)")
             print("[] Polyine: \(route.polyline)")
             
+            // Añadimos la ruta al mapa
+            self?.mapView.addOverlay(route.polyline)
+            self?.centerMapBetweenCurrentLocationAndRestaurant()
+
             // Actualizamos la variable para no solicitar la ruta otra vez
             self?.shouldRequestDirections = false
         }
@@ -117,5 +127,15 @@ extension DetailViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("[] \(error.localizedDescription)")
+    }
+}
+
+// MARK: - MKMapViewDelegatee
+extension DetailViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        let renderer = MKPolylineRenderer(overlay: overlay)
+        renderer.strokeColor = .systemBlue
+        renderer.lineWidth = 5
+        return renderer
     }
 }
