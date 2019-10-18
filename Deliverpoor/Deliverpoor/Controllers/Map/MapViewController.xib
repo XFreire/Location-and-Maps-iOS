@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MapViewController" customModule="Deliverpoor" customModuleProvider="target">
             <connections>
+                <outlet property="mapView" destination="MUK-JS-d5M" id="avn-Wc-oc7"/>
+                <outlet property="segmentedControl" destination="efP-al-wcO" id="V6X-CV-H2D"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,11 +22,24 @@
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MUK-JS-d5M">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                 </mapView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="efP-al-wcO">
+                    <rect key="frame" x="93.5" y="74" width="227" height="32"/>
+                    <segments>
+                        <segment title="Standard"/>
+                        <segment title="Satellite"/>
+                        <segment title="Hybrid"/>
+                    </segments>
+                    <connections>
+                        <action selector="segmentedControlDidChange:" destination="-1" eventType="valueChanged" id="6V0-Sx-rKu"/>
+                    </connections>
+                </segmentedControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MUK-JS-d5M" secondAttribute="trailing" id="Czi-rn-io0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="MUK-JS-d5M" secondAttribute="bottom" id="JvA-8H-TFd"/>
+                <constraint firstItem="efP-al-wcO" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Mzo-wN-oKj"/>
+                <constraint firstItem="efP-al-wcO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="f4T-We-C6f"/>
                 <constraint firstItem="MUK-JS-d5M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iDA-9l-ObL"/>
                 <constraint firstItem="MUK-JS-d5M" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="uDF-3m-JLS"/>
             </constraints>

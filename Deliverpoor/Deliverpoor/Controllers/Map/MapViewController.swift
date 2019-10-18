@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import MapKit
 
-class MapViewController: UIViewController {
+final class MapViewController: UIViewController {
 
+    // MARK: - Properties
+    @IBOutlet private weak var mapView: MKMapView!
+    @IBOutlet private weak var segmentedControl: UISegmentedControl!
+    
     // MARK: - Initialization
       init() {
           super.init(nibName: nil, bundle: nil)
@@ -24,4 +29,23 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - Actions
+    @IBAction func segmentedControlDidChange(_ sender: UISegmentedControl) {
+        enum MapType: Int {
+            case standard, satellite, hybrid
+        }
+        
+        guard let selectedType = MapType(rawValue: sender.selectedSegmentIndex) else { return }
+        switch selectedType {
+        
+        case .standard:
+            mapView.mapType = .standard
+        case .satellite:
+            mapView.mapType = .satellite
+        case .hybrid:
+            mapView.mapType = .hybrid
+        }
+    }
+    
 }
