@@ -28,6 +28,7 @@ final class MapViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         centerMapInACoruna()
     }
     
@@ -56,5 +57,20 @@ extension MapViewController {
         let coruna = CLLocation(latitude: 43.3713500, longitude: -8.3960000)
         let region = MKCoordinateRegion(center: coruna.coordinate, latitudinalMeters: 1500, longitudinalMeters: 1500)
         mapView.setRegion(region, animated: true)
+    }
+}
+
+// MARK: - MKMapViewDelegate
+extension MapViewController: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+        print("[] Region will change")
+    }
+    
+    func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+        print("[] Region has changed visible region")
+    }
+    
+    func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        print("[] Region has changed")
     }
 }
