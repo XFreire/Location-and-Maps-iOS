@@ -35,6 +35,7 @@ final class MapViewController: UIViewController {
         mapView.delegate = self
         centerMapInACoruna()
         mapView.addAnnotations(repository.all())
+        registerAnnotationViews()
     }
     
     // MARK: - Actions
@@ -63,6 +64,11 @@ extension MapViewController {
         let region = MKCoordinateRegion(center: coruna.coordinate, latitudinalMeters: 1500, longitudinalMeters: 1500)
         mapView.setRegion(region, animated: true)
     }
+    
+    private func registerAnnotationViews() {
+        mapView.register(RestaurantAnnontationView.self, forAnnotationViewWithReuseIdentifier: RestaurantAnnontationView.defaultIdentifier)
+        mapView.register(RestaurantClusterView.self, forAnnotationViewWithReuseIdentifier: RestaurantClusterView.defaultIdentifier)
+    }
 }
 
 // MARK: - MKMapViewDelegate
@@ -84,27 +90,19 @@ extension MapViewController: MKMapViewDelegate {
             return nil
         }
         
-        if let cluster = annotation as? MKClusterAnnotation {
-            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "RestaurantsCluster") as? MKMarkerAnnotationView ?? MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "RestaurantsCluster")
-            
-            annotationView.markerTintColor = .orange
-            annotationView.annotation = cluster
-            
-            return annotationView
+        let annotationView: MKAnnotationView
+        if annotation is MKClusterAnnotation {
+            annotationView = mapView.dequeueReusableAnnotationView(
+                withIdentifier: RestaurantClusterView.defaultIdentifier,
+                for: annotation
+            )
         } else {
-            
-            let annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "Restaurants") as? MKMarkerAnnotationView ?? MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: "Restaurants")
-            
-            annotationView.glyphText = "🍽"
-            
-            annotationView.canShowCallout = true
-            annotationView.clusteringIdentifier = "RestaurantCluster"
-            
-            let imageView = UIImageView(image: UIImage(named: "placeholder-food.jpg"))
-            imageView.contentMode = .scaleAspectFill
-            annotationView.detailCalloutAccessoryView = imageView
-            
-            return annotationView
+            annotationView = mapView.dequeueReusableAnnotationView(
+                withIdentifier: RestaurantAnnontationView.defaultIdentifier,
+                for: annotation
+            )
         }
+        
+        return annotationView
     }
 }
