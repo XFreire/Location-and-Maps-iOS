@@ -3,5 +3,6 @@
     <pages>
         <page name='CLLocation'/>
         <page name='CLGeocoder'/>
+        <page name='MKDirections'/>
     </pages>
 </playground>
