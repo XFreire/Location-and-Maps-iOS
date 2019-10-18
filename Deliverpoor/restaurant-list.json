@@ -1,20 +1,20 @@
 [
     {
-        "name": "Restaurant 1",
+        "name": "La bombilla",
         "latitude": 43.370659,
         "longitude": -8.3996518
         
     },
     {
-        "name": "Restaurant 2",   
-        "latitude": 43.374529,
-        "longitude": -8.3996518
+        "name": "O Recodo",
+        "latitude": 43.3653592,
+        "longitude": -8.4126809
         
     },
     {
-        "name": "Restaurant 3",
-        "latitude": 43.371319,
-        "longitude": -8.3976518
+        "name": "Galipizza",
+        "latitude": 43.3650887,
+        "longitude": -8.4089989
         
     }
 ]

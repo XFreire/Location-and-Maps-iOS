@@ -187,8 +187,7 @@ extension ListViewController: UITableViewDataSource {
                         let cellViewModel = RestaurantCellViewModel(
                             name: restaurant.name,
                             address: address,
-                            distance: self.distance(to: location),
-                            time: "¿?"
+                            distance: self.distance(to: location)
                         )
                         
                         cell.update(with: cellViewModel)

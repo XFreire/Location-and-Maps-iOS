@@ -31,17 +31,6 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wA0-e0-350">
-                        <rect key="frame" x="204" y="116.5" width="100" height="50"/>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="KaG-0o-Dda"/>
-                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="h1y-7J-wbF"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculating distance..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2iI-s1-3mv">
                         <rect key="frame" x="16" y="200.5" width="126" height="15"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
@@ -53,12 +42,10 @@
                     <constraint firstAttribute="trailing" secondItem="lIJ-zu-Cwb" secondAttribute="trailing" id="HRb-uU-2kJ"/>
                     <constraint firstItem="lIJ-zu-Cwb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KlZ-av-6rI"/>
                     <constraint firstItem="lIJ-zu-Cwb" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.55" id="QnS-Mi-GIf"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="wA0-e0-350" secondAttribute="trailing" id="SWm-23-ShV"/>
                     <constraint firstItem="JiD-3G-vXS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Tzb-wa-FQB"/>
                     <constraint firstItem="lIJ-zu-Cwb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Umu-wW-9MZ"/>
                     <constraint firstItem="2iI-s1-3mv" firstAttribute="top" secondItem="YKN-jj-N4h" secondAttribute="bottom" constant="2" id="YkP-jy-5bv"/>
                     <constraint firstItem="2iI-s1-3mv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="kA2-qB-qNe"/>
-                    <constraint firstItem="wA0-e0-350" firstAttribute="bottom" secondItem="lIJ-zu-Cwb" secondAttribute="bottom" constant="25" id="kvn-5l-geS"/>
                     <constraint firstItem="YKN-jj-N4h" firstAttribute="top" secondItem="JiD-3G-vXS" secondAttribute="bottom" constant="2" id="mvc-jF-hbO"/>
                     <constraint firstItem="YKN-jj-N4h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="tde-SI-Ydv"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2iI-s1-3mv" secondAttribute="bottom" constant="16" id="umV-Rq-Ljg"/>
@@ -71,7 +58,6 @@
                 <outlet property="distanceLabel" destination="2iI-s1-3mv" id="vgw-FH-PBx"/>
                 <outlet property="nameLabel" destination="JiD-3G-vXS" id="0FV-Bf-5Ay"/>
                 <outlet property="photoView" destination="lIJ-zu-Cwb" id="wgk-E5-KeX"/>
-                <outlet property="timeLabel" destination="wA0-e0-350" id="UUc-cz-oLF"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="199.21875"/>
         </tableViewCell>
