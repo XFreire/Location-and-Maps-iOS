@@ -22,10 +22,12 @@
 		F787D1F5235375C7007001F8 /* LocalRestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1F4235375C7007001F8 /* LocalRestaurantRepository.swift */; };
 		F787D1F723539036007001F8 /* torre-a-riazor.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D1F623539036007001F8 /* torre-a-riazor.gpx */; };
 		F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D1F82355A630007001F8 /* a-la-bombilla.gpx */; };
-		F787D204235A1A7C007001F8 /* torre-hercules.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D203235A1A7B007001F8 /* torre-hercules.gpx */; };
-		F7F2EB76235A5A8A00B836F3 /* torre-hercules2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F7F2EB75235A5A8900B836F3 /* torre-hercules2.gpx */; };
 		F787D1FD2355A80F007001F8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F787D1FB2355A80F007001F8 /* DetailViewController.swift */; };
 		F787D1FE2355A80F007001F8 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F787D1FC2355A80F007001F8 /* DetailViewController.xib */; };
+		F787D204235A1A7C007001F8 /* torre-hercules.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F787D203235A1A7B007001F8 /* torre-hercules.gpx */; };
+		F7F2EB76235A5A8A00B836F3 /* torre-hercules2.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F7F2EB75235A5A8900B836F3 /* torre-hercules2.gpx */; };
+		F7F2EB7B235A631700B836F3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F2EB7A235A631700B836F3 /* MapViewController.swift */; };
+		F7F2EB7D235A632800B836F3 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7F2EB7C235A632800B836F3 /* MapViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +61,12 @@
 		F787D1F4235375C7007001F8 /* LocalRestaurantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalRestaurantRepository.swift; sourceTree = "<group>"; };
 		F787D1F623539036007001F8 /* torre-a-riazor.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-a-riazor.gpx"; sourceTree = "<group>"; };
 		F787D1F82355A630007001F8 /* a-la-bombilla.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "a-la-bombilla.gpx"; sourceTree = "<group>"; };
-		F787D203235A1A7B007001F8 /* torre-hercules.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-hercules.gpx"; sourceTree = "<group>"; };
-		F7F2EB75235A5A8900B836F3 /* torre-hercules2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-hercules2.gpx"; sourceTree = "<group>"; };
 		F787D1FB2355A80F007001F8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F787D1FC2355A80F007001F8 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		F787D203235A1A7B007001F8 /* torre-hercules.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-hercules.gpx"; sourceTree = "<group>"; };
+		F7F2EB75235A5A8900B836F3 /* torre-hercules2.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "torre-hercules2.gpx"; sourceTree = "<group>"; };
+		F7F2EB7A235A631700B836F3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F7F2EB7C235A632800B836F3 /* MapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 		F787D1F023537545007001F8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F7F2EB79235A629A00B836F3 /* Map */,
 				F787D1FA2355A802007001F8 /* Detail */,
 				F787D1E0235361D5007001F8 /* List */,
 			);
@@ -167,6 +172,15 @@
 				F787D1FC2355A80F007001F8 /* DetailViewController.xib */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		F7F2EB79235A629A00B836F3 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				F7F2EB7A235A631700B836F3 /* MapViewController.swift */,
+				F7F2EB7C235A632800B836F3 /* MapViewController.xib */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F7F2EB76235A5A8A00B836F3 /* torre-hercules2.gpx in Resources */,
+				F7F2EB7D235A632800B836F3 /* MapViewController.xib in Resources */,
 				F787D1F723539036007001F8 /* torre-a-riazor.gpx in Resources */,
 				F787D1E62353629C007001F8 /* placeholder-food.jpg in Resources */,
 				F71D9E6A235236F900F92667 /* LaunchScreen.storyboard in Resources */,
@@ -258,7 +273,6 @@
 				F71D9E852352484100F92667 /* restaurant-list.json in Resources */,
 				F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */,
 				F787D204235A1A7C007001F8 /* torre-hercules.gpx in Resources */,
-				F787D1EF235371BC007001F8 /* MapViewController.xib in Resources */,
 				F787D1F92355A630007001F8 /* a-la-bombilla.gpx in Resources */,
 				F787D1FE2355A80F007001F8 /* DetailViewController.xib in Resources */,
 				F787D1E4235361F1007001F8 /* RestaurantCell.xib in Resources */,
@@ -287,6 +301,7 @@
 				F787D1F5235375C7007001F8 /* LocalRestaurantRepository.swift in Sources */,
 				F71D9E812352373C00F92667 /* ListViewController.swift in Sources */,
 				F787D1FD2355A80F007001F8 /* DetailViewController.swift in Sources */,
+				F7F2EB7B235A631700B836F3 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

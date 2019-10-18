@@ -20,10 +20,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         
         let listViewController = ListViewController()
+        listViewController.tabBarItem = UITabBarItem(title: "List", image: UIImage(systemName: "list.bullet.below.rectangle"), selectedImage: nil)
+        let mapViewController = MapViewController()
+        mapViewController.tabBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "mappin"), selectedImage: nil)
         
         let listNavigationController = UINavigationController(rootViewController: listViewController)
-
-        window?.rootViewController = listNavigationController
+        let mapNavigationController = UINavigationController(rootViewController: mapViewController)
+        
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [
+            listNavigationController,
+            mapNavigationController
+        ]
+        
+        window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
     }
 }
